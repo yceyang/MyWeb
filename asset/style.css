@@ -15,7 +15,8 @@ header {
 
 .container {
   width: 820px;
-  margin: 110px auto;
+  margin: 0px auto;
+  top: 65px;
 }
 
 .menu li:hover {
@@ -49,8 +50,13 @@ header {
 .my-info {
   width: 65%;
   height: 286px;
-  margin-left: 256px;
-  padding: 5px;
+  margin-left: 286px;
+  padding: 50px 0px 0px 50px;
+}
+
+.my-info h1, h4 {
+  margin: 0px;
+  text-align: left;
 }
 
 .my-avatar img {
@@ -59,9 +65,12 @@ header {
   border-radius: 50%;
 }
 
-
-table th{
+table th {
   text-align: left;
+}
+
+table td {
+  width: 150px;
 }
 
 section {
@@ -69,7 +78,7 @@ section {
   clear: both;
 }
 
-section h1 {
+.title {
   margin: 50px 0px;
   font-size: 160%;
   text-align: center;
@@ -109,10 +118,6 @@ section input {
   opacity: 1;
 }
 
-.contact-form {
-
-}
-
 #contact {
   margin: 0px auto;
 }
@@ -143,12 +148,8 @@ footer {
   height: 80px;
 }
 
-
-
-
-
-
-
-
+.container > section {
+  padding: 75px 0;
+}
 
 
