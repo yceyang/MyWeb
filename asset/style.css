@@ -16,7 +16,7 @@ header {
 .container {
   width: 820px;
   margin: 0px auto;
-  top: 65px;
+  top: 65px; /*not working*/
 }
 
 .menu li:hover {
@@ -43,44 +43,45 @@ header {
   display: inline-block;
 }
 
-.my-avatar {
-  width: 35%;
-}
-
-.my-info {
-  width: 65%;
-  height: 286px;
-  margin-left: 286px;
-  padding: 50px 0px 0px 50px;
-}
-
-.my-info h1, h4 {
-  margin: 0px;
-  text-align: left;
-}
-
-.my-avatar img {
-  float: left;
-  width: 100%;
-  border-radius: 50%;
-}
-
-table th {
-  text-align: left;
-}
-
-table td {
-  width: 150px;
-}
-
 section {
   width: 100%;
   clear: both;
 }
 
+.my-avatar {
+  width: 40%;
+  margin: 3%;
+  float: left;
+}
+
+.my-avatar img {
+  width: 100%;
+  border-radius: 50%;
+  float: left;
+}
+
+.my-info {
+  margin: 2% 0px 0px 10%;
+  padding: 2%;
+  text-align: left;
+}
+
+.my-info h1, 
+.my-info h3 {
+  margin: 10px 0px;
+}
+
+.my-info th {
+  text-align: left;
+}
+
+.my-info td {
+  width: 10%;
+}
+
 .title {
   margin: 50px 0px;
-  font-size: 160%;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -149,7 +150,101 @@ footer {
 }
 
 .container > section {
-  padding: 75px 0;
+  padding: 65px 0;
 }
 
+@media screen and (max-width: 780px) {
+  .my-avatar {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .my-avatar img {
+    padding: 10%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .menu-button, 
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .container {
+    width: auto;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: #fff;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 160px;
+    height: 100%;
+    background: rgba(255, 17, 128, 0.6);
+    box-shadow: 0px 3px 5px grey;
+  }
+
+  .menu ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  .item {
+    max-width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .item img,
+  .item-info {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  form.contact-form {
+    width: 80%;
+  }
+
+  .container > section {
+  padding: 50px 0;
+  }
+
+}
 
